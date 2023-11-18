@@ -1,6 +1,8 @@
-const app = require("express")(); //import express package
-// fonksiyon olduğu için parantez ekledik?
+const express = require("express"); //very common middleware
+const app = express();
 const PORT = 8080;
+
+app.use(express.json())//json middleware which will convert the body to json
 // period after app u can use http methods
 // get http://localhost:8080/tshirt
 // user requests that url then callback function handle the request
